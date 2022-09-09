@@ -7,8 +7,7 @@
     "dev": "npx ts-node-dev --respawn src/index.ts",
     "lint": "ts-standard",
     "start": "NODE_ENV=production node build/index.js",
-    "build": "tsc -b --watch",
-    "tsc": "tsc"
+    "build": "tsc -b --watch"
   },
   "keywords": [],
   "author": "",
