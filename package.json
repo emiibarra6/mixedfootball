@@ -4,11 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "ts-node-dev backend/index.ts",
+    "dev": "npx ts-node-dev --respawn src/index.ts",
     "lint": "ts-standard",
-    "start": "node build/index.js",
-    "tsc": "tsc",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "NODE_ENV=production node build/index.js",
+    "build": "tsc -b --watch",
+    "tsc": "tsc"
   },
   "keywords": [],
   "author": "",
