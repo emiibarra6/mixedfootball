@@ -1,7 +1,7 @@
-import dotenv from "dotenv";
+import dotenv from 'dotenv'
 // Local environment variables
 dotenv.config({
-  path: "./env/.env.local",
-});
+  path: './.env.local'
+})
 
-export default dotenv;
+export default dotenv
