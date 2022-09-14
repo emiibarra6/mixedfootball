@@ -1,13 +1,13 @@
 import {prop , getModelForClass} from '@typegoose/typegoose'
 
 class User {
-    @prop()
+    @prop({required:true})
     username: string
 
-    @prop()
+    @prop({required:true, minlength:6})
     password: string
 
-    @prop()
+    @prop({required:true , trim:true})
     email:string
 }
 const UserModel = getModelForClass(User)
