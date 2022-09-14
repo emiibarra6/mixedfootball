@@ -1,3 +1,4 @@
+import { rejects } from "assert";
 import { App } from "./src/app";
 import { sequelize, sqlConnect } from "./src/utils/sequelize";
 import { connectDBMongo } from './src/utils/typegoose'

@@ -1,3 +1,5 @@
+import { Url } from "url";
+
 export type serverConfigType = {
   port: string;
 };
@@ -13,3 +15,8 @@ export type databaseConfigType = {
 export type dbMongoUrl = {
   url: string;
 };
+
+export type jwtConfig = {
+  secret:string;
+}
+

@@ -13,5 +13,8 @@ export default {
   },
   mongodb:{
     url: process.env.DB_MONGO_URL
+  },
+  jwtConfig:{
+    secret: process.env.JWT_SECRET
   }
 };
