@@ -6,7 +6,7 @@ import { dbMongoUrl } from '../types/config.types'
 const env = config.get<dbMongoUrl>("mongodb");
 
 
-export async function connectDB() {
+export async function connectDBMongo() {
     try {
         const db = await connect(env.url)
         logger.debug.info("Mongo connected to: "  , db.connection.db.databaseName); 
