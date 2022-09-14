@@ -1,3 +1,4 @@
+
 import express, { Application } from 'express'
 import config from 'config'
 import { serverConfigType } from './types/config.types'
@@ -33,3 +34,4 @@ export class App {
     })
   }
 }
+

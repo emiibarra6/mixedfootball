@@ -9,3 +9,7 @@ export type databaseConfigType = {
   driver: string;
   password: string;
 };
+
+export type dbMongoUrl = {
+  url: string;
+};

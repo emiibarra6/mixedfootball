@@ -11,4 +11,7 @@ export default {
     driver: process.env.DB_DRIVER,
     password: process.env.DB_PASSWORD,
   },
+  mongodb:{
+    url: process.env.DB_MONGO_URL
+  }
 };
