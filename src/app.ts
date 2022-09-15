@@ -1,8 +1,8 @@
-
 import express, { Application } from 'express'
 import config from 'config'
 import { serverConfigType } from './types/config.types'
 require('dotenv').config()
+import apiIndexRouter from './routes/index.routes';
 
 export class App {
   private readonly app: Application
@@ -26,7 +26,9 @@ export class App {
     this.app.use(express.urlencoded({ extended: true }))
   }
 
-  routes () {}
+  routes () {
+    this.app.use(apiIndexRouter);
+  }
 
   listen () {
     this.app.listen(this.app.get('port'), () => {
