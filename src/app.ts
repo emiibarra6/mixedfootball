@@ -27,7 +27,7 @@ export class App {
   }
 
   routes () {
-    this.app.use(apiIndexRouter);
+    apiIndexRouter(this.app);
   }
 
   listen () {
