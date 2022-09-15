@@ -1,6 +1,7 @@
 import {prop , getModelForClass} from '@typegoose/typegoose'
 
-class User {
+class users {
+
     @prop({required:true})
     username: string
 
@@ -9,6 +10,7 @@ class User {
 
     @prop({required:true , trim:true})
     email:string
+
 }
-const UserModel = getModelForClass(User)
+const UserModel = getModelForClass(users)
 export default UserModel;

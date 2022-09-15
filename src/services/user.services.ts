@@ -10,13 +10,14 @@ const env = config.get<jwtConfig>("jwtConfig");
 
 export async function login(user: DocumentDefinition<User>) {
     try {
-      const foundUser = await UserModel.findOne({ username: user.username });
-   
+      const { username , password  } = user;
+      const foundUser = await UserModel.findOne( { username } );
+      console.log(foundUser)
       if (!foundUser) {
         throw new Error('Name of user is not correct');
       }
    
-      const isMatch = bcrypt.compareSync(user.password, foundUser.password);
+      const isMatch = bcrypt.compareSync( password, foundUser.password);
    
       if (isMatch) {
         const token = jwt.sign({ _id: foundUser._id?.toString(), username: foundUser.username }, env.secret, {
